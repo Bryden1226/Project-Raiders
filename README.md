@@ -50,3 +50,13 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Version 4: Items Encyclopedia
+
+The former Inventory tab is now **Items**. It loads the complete community item dataset through the ARC Raiders Data API, which mirrors the open RaidTheory dataset used by ARCTracker.io.
+
+- Source data: RaidTheory/arcraiders-data
+- Reference site: ARCTracker.io
+- API mirror: Mahcks/arcraiders-data-api
+
+The encyclopedia loads in paginated batches and falls back to the locally bundled progression-material list if the external data source is temporarily unavailable.
