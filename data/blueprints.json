@@ -5,24 +5,11 @@
     "itemName": "Angled Grip II",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Duct Tape",
-        "quantity": 3
-      },
-      {
-        "item": "Mechanical Components",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/angled-grip-ii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately reduces horizontal recoil. Compatible with Arpeggio, Ferro, Il Toro, and Stitcher."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "angled-grip-iii-blueprint",
@@ -30,24 +17,11 @@
     "itemName": "Angled Grip III",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Duct Tape",
-        "quantity": 5
-      },
-      {
-        "item": "Mod Components",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/angled-grip-iii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Significantly reduces horizontal recoil. Compatible with Arpeggio, Ferro, Venator, Il Toro, and Stitcher."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "anvil-blueprint",
@@ -55,20 +29,11 @@
     "itemName": "Anvil",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Simple Gun Parts",
-        "quantity": 6
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/anvil-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Has high damage output and headshot damage, but slow handling."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "aphelion-blueprint",
@@ -76,28 +41,11 @@
     "itemName": "Aphelion",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Complex Gun Parts",
-        "quantity": 3
-      },
-      {
-        "item": "Magnetic Accelerator",
-        "quantity": 3
-      },
-      {
-        "item": "Matriarch Reactor",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/aphelion-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "An experimental ARC beam weapon powered by a Matriarch Reactor."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "barricade-kit-blueprint",
@@ -105,20 +53,11 @@
     "itemName": "Barricade Kit",
     "category": "Gear",
     "rarity": "Common",
-    "bench": "Utility Station",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/barricade-kit-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A deployable cover that can block incoming damage until it breaks."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "bettina-blueprint",
@@ -126,28 +65,11 @@
     "itemName": "Bettina",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Advanced Mechanical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Canister",
-        "quantity": 5
-      },
-      {
-        "item": "Heavy Gun Parts",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/bettina-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Has a slow fire rate and high damage output."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "blaze-grenade-blueprint",
@@ -155,24 +77,11 @@
     "itemName": "Blaze Grenade",
     "category": "Explosive",
     "rarity": "Common",
-    "bench": "Explosives Station",
-    "materials": [
-      {
-        "item": "Explosive Compound",
-        "quantity": 1
-      },
-      {
-        "item": "Oil",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/blaze-grenade-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A grenade that detonates on impact, covering an area in fire that deals damage over time."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "blue-light-stick-blueprint",
@@ -180,20 +89,11 @@
     "itemName": "Blue Light Stick",
     "category": "Utility",
     "rarity": "Common",
-    "bench": "Utility Station",
-    "materials": [
-      {
-        "item": "Chemicals",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/blue-light-stick-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A throwable chemical light that illuminates the area around it."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "bobcat-blueprint",
@@ -201,28 +101,11 @@
     "itemName": "Bobcat",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Exodus Modules",
-        "quantity": 2
-      },
-      {
-        "item": "Light Gun Parts",
-        "quantity": 3
-      },
-      {
-        "item": "Magnetic Accelerator",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/bobcat-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Fully automatic SMG with high fire rate but low accuracy."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "burletta-blueprint",
@@ -230,28 +113,11 @@
     "itemName": "Burletta",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 3
-      },
-      {
-        "item": "Simple Gun Parts",
-        "quantity": 8
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/burletta-blueprint.webp",
-    "recipeVerified": true,
-    "quest": {
-      "name": "Industrial Espionage",
-      "trader": "Tian Wen",
-      "reward": 1
-    },
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A blueprint to craft the Burletta weapon."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "canto-blueprint",
@@ -259,28 +125,11 @@
     "itemName": "Canto",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Advanced Mechanical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Magnet",
-        "quantity": 5
-      },
-      {
-        "item": "Medium Gun Parts",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/canto-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Fully automatic submachine gun with a larger caliber."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "combat-mk-3-aggressive-blueprint",
@@ -288,24 +137,11 @@
     "itemName": "Combat Mk. 3 (Aggressive)",
     "category": "Gear",
     "rarity": "Common",
-    "bench": "Gear Bench",
-    "materials": [
-      {
-        "item": "Advanced Electrical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Processor",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/combat-mk-3-aggressive-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "An improved version of the Combat II augment. Supports more shield types and includes extra space for grenades."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "combat-mk-3-flanking-blueprint",
@@ -313,24 +149,11 @@
     "itemName": "Combat Mk. 3 (Flanking)",
     "category": "Gear",
     "rarity": "Common",
-    "bench": "Gear Bench",
-    "materials": [
-      {
-        "item": "Advanced Electrical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Processor",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/combat-mk-3-flanking-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "An improved version of the Combat II augment, designed for flanking maneuvers with enhanced mobility."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "compensator-ii-blueprint",
@@ -338,24 +161,11 @@
     "itemName": "Compensator II",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Wires",
-        "quantity": 4
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/compensator-ii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately reduces per-shot dispersion."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "compensator-iii-blueprint",
@@ -363,24 +173,11 @@
     "itemName": "Compensator III",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mod Components",
-        "quantity": 2
-      },
-      {
-        "item": "Wires",
-        "quantity": 8
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/compensator-iii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately reduces per-shot dispersion. Compatible with Arpeggio, Ferro, Renegade, Anvil, and Stitcher."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "complex-gun-parts-blueprint",
@@ -388,28 +185,11 @@
     "itemName": "Complex Gun Parts",
     "category": "Component",
     "rarity": "Common",
-    "bench": "Refiner",
-    "materials": [
-      {
-        "item": "Heavy Gun Parts",
-        "quantity": 2
-      },
-      {
-        "item": "Light Gun Parts",
-        "quantity": 2
-      },
-      {
-        "item": "Medium Gun Parts",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/complex-gun-parts-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Used to craft advanced weapons."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "crash-mat-blueprint",
@@ -417,24 +197,11 @@
     "itemName": "Crash Mat",
     "category": "Gear",
     "rarity": "Common",
-    "bench": "Utility Station",
-    "materials": [
-      {
-        "item": "Durable Cloth",
-        "quantity": 1
-      },
-      {
-        "item": "Electrical Components",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/crash-mat-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A throwable emergency landing device that softens heavy landings."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "deadline-blueprint",
@@ -442,28 +209,11 @@
     "itemName": "Deadline",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Explosives Station",
-    "materials": [
-      {
-        "item": "ARC Circuitry",
-        "quantity": 2
-      },
-      {
-        "item": "Comet Igniter",
-        "quantity": 1
-      },
-      {
-        "item": "Explosive Compound",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/deadline-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Unlocks the ability to craft Deadline mines at the Explosives Station."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "defibrillator-blueprint",
@@ -471,24 +221,11 @@
     "itemName": "Defibrillator",
     "category": "Medical",
     "rarity": "Common",
-    "bench": "Medical Lab",
-    "materials": [
-      {
-        "item": "Plastic Parts",
-        "quantity": 9
-      },
-      {
-        "item": "Moss",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/defibrillator-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "An injection that quickly revives downed raiders and restores some health."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "dolabra-blueprint",
@@ -496,28 +233,11 @@
     "itemName": "Dolabra",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Magnetic Accelerator",
-        "quantity": 3
-      },
-      {
-        "item": "Shredder Gyro",
-        "quantity": 3
-      },
-      {
-        "item": "Vaporizer Regulator",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/dolabra-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "An experimental weapon that can fire a wide short-range blast or a focused medium-range beam of heat."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "equalizer-blueprint",
@@ -525,28 +245,11 @@
     "itemName": "Equalizer",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Complex Gun Parts",
-        "quantity": 3
-      },
-      {
-        "item": "Magnetic Accelerator",
-        "quantity": 3
-      },
-      {
-        "item": "Queen Reactor",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/equalizer-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A high-capacity experimental beam rifle."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "explosive-mine-blueprint",
@@ -554,24 +257,11 @@
     "itemName": "Explosive Mine",
     "category": "Explosive",
     "rarity": "Common",
-    "bench": "Explosives Station",
-    "materials": [
-      {
-        "item": "Explosive Compound",
-        "quantity": 1
-      },
-      {
-        "item": "Sensors",
-        "quantity": 1
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/explosive-mine-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A proximity-triggered explosive device that detonates when enemies approach."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-barrel-ii-blueprint",
@@ -579,24 +269,11 @@
     "itemName": "Extended Barrel II",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 3
-      },
-      {
-        "item": "Wires",
-        "quantity": 6
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-barrel-ii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately increases bullet velocity."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-barrel-iii-blueprint",
@@ -604,24 +281,11 @@
     "itemName": "Extended Barrel III",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mod Components",
-        "quantity": 2
-      },
-      {
-        "item": "Wires",
-        "quantity": 8
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-barrel-iii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately increases bullet velocity. Compatible with Tempest, Arpeggio, Ferro, Renegade, and Anvil."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-light-mag-ii-blueprint",
@@ -629,24 +293,11 @@
     "itemName": "Extended Light Mag II",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Steel Spring",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-light-mag-ii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately extends the ammo capacity of compatible weapons that use light ammo."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-light-mag-iii-blueprint",
@@ -654,24 +305,11 @@
     "itemName": "Extended Light Mag III",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mod Components",
-        "quantity": 2
-      },
-      {
-        "item": "Steel Spring",
-        "quantity": 5
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-light-mag-iii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Significantly extends the ammo capacity of compatible weapons that use light ammo."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-medium-mag-ii-blueprint",
@@ -679,24 +317,11 @@
     "itemName": "Extended Medium Mag II",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Steel Spring",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-medium-mag-ii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately extends the ammo capacity of compatible weapons that use medium ammo."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-medium-mag-iii-blueprint",
@@ -704,24 +329,11 @@
     "itemName": "Extended Medium Mag III",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mod Components",
-        "quantity": 2
-      },
-      {
-        "item": "Steel Spring",
-        "quantity": 5
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-medium-mag-iii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Significantly extends the ammo capacity of compatible weapons that use medium ammo."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-shotgun-mag-ii-blueprint",
@@ -729,24 +341,11 @@
     "itemName": "Extended Shotgun Mag II",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mechanical Components",
-        "quantity": 2
-      },
-      {
-        "item": "Steel Spring",
-        "quantity": 3
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-shotgun-mag-ii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Moderately extends the ammo capacity of shotguns."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "extended-shotgun-mag-iii-blueprint",
@@ -754,24 +353,11 @@
     "itemName": "Extended Shotgun Mag III",
     "category": "Attachment",
     "rarity": "Common",
-    "bench": "Gunsmith",
-    "materials": [
-      {
-        "item": "Mod Components",
-        "quantity": 2
-      },
-      {
-        "item": "Steel Spring",
-        "quantity": 5
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/extended-shotgun-mag-iii-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Significantly extends the ammo capacity of shotguns."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "fireworks-box-blueprint",
@@ -779,28 +365,11 @@
     "itemName": "Fireworks Box",
     "category": "Weapon",
     "rarity": "Common",
-    "bench": "Explosives Station",
-    "materials": [
-      {
-        "item": "Explosive Compound",
-        "quantity": 2
-      },
-      {
-        "item": "Pop Trigger",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/fireworks-box-blueprint.webp",
-    "recipeVerified": true,
-    "quest": {
-      "name": "Test Case",
-      "trader": "Apollo",
-      "reward": 1
-    },
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "Unlocks the crafting blueprint for the Fireworks Box."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "gas-mine-blueprint",
@@ -808,24 +377,11 @@
     "itemName": "Gas Mine",
     "category": "Explosive",
     "rarity": "Common",
-    "bench": "Explosives Station",
-    "materials": [
-      {
-        "item": "Chemicals",
-        "quantity": 4
-      },
-      {
-        "item": "Rubber Parts",
-        "quantity": 2
-      }
-    ],
+    "bench": "Unknown",
+    "materials": [],
     "image": "assets/blueprints/gas-mine-blueprint.webp",
-    "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000,
-    "description": "A proximity-triggered mine that deploys a gas cloud that rapidly drains stamina."
+    "recipeVerified": false,
+    "quest": null
   },
   {
     "id": "green-light-stick-blueprint",
@@ -842,10 +398,7 @@
     ],
     "image": "assets/blueprints/green-light-stick-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "heavy-gun-parts-blueprint",
@@ -862,10 +415,7 @@
     ],
     "image": "assets/blueprints/heavy-gun-parts-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "hullcracker-blueprint",
@@ -890,10 +440,7 @@
     ],
     "image": "assets/blueprints/hullcracker-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "il-toro-blueprint",
@@ -914,10 +461,7 @@
     ],
     "image": "assets/blueprints/il-toro-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "jolt-mine-blueprint",
@@ -938,10 +482,7 @@
     ],
     "image": "assets/blueprints/jolt-mine-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "jupiter-blueprint",
@@ -966,10 +507,7 @@
     ],
     "image": "assets/blueprints/jupiter-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "light-gun-parts-blueprint",
@@ -986,10 +524,7 @@
     ],
     "image": "assets/blueprints/light-gun-parts-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "lightweight-stock-blueprint",
@@ -1010,10 +545,7 @@
     ],
     "image": "assets/blueprints/lightweight-stock-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "looting-mk-3-safekeeper-blueprint",
@@ -1034,10 +566,7 @@
     ],
     "image": "assets/blueprints/looting-mk-3-safekeeper-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "looting-mk-3-survivor-blueprint",
@@ -1058,10 +587,7 @@
     ],
     "image": "assets/blueprints/looting-mk-3-survivor-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "lure-grenade-blueprint",
@@ -1082,10 +608,7 @@
     ],
     "image": "assets/blueprints/lure-grenade-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "medium-gun-parts-blueprint",
@@ -1102,10 +625,7 @@
     ],
     "image": "assets/blueprints/medium-gun-parts-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "muzzle-brake-ii-blueprint",
@@ -1126,10 +646,7 @@
     ],
     "image": "assets/blueprints/muzzle-brake-ii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "muzzle-brake-iii-blueprint",
@@ -1150,10 +667,7 @@
     ],
     "image": "assets/blueprints/muzzle-brake-iii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "osprey-blueprint",
@@ -1178,10 +692,7 @@
     ],
     "image": "assets/blueprints/osprey-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "padded-stock-blueprint",
@@ -1202,10 +713,7 @@
     ],
     "image": "assets/blueprints/padded-stock-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "powered-descender-blueprint",
@@ -1226,10 +734,7 @@
     ],
     "image": "assets/blueprints/powered-descender-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "pulse-mine-blueprint",
@@ -1250,10 +755,7 @@
     ],
     "image": "assets/blueprints/pulse-mine-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "rascal-blueprint",
@@ -1278,10 +780,7 @@
     ],
     "image": "assets/blueprints/rascal-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "red-light-stick-blueprint",
@@ -1298,10 +797,7 @@
     ],
     "image": "assets/blueprints/red-light-stick-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "remote-raider-flare-blueprint",
@@ -1322,10 +818,7 @@
     ],
     "image": "assets/blueprints/remote-raider-flare-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "seeker-grenade-blueprint",
@@ -1346,10 +839,7 @@
     ],
     "image": "assets/blueprints/seeker-grenade-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "shotgun-choke-ii-blueprint",
@@ -1370,10 +860,7 @@
     ],
     "image": "assets/blueprints/shotgun-choke-ii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "shotgun-choke-iii-blueprint",
@@ -1394,10 +881,7 @@
     ],
     "image": "assets/blueprints/shotgun-choke-iii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "shotgun-silencer-blueprint",
@@ -1418,10 +902,7 @@
     ],
     "image": "assets/blueprints/shotgun-silencer-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "showstopper-blueprint",
@@ -1446,10 +927,7 @@
     ],
     "image": "assets/blueprints/showstopper-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "silencer-i-blueprint",
@@ -1470,10 +948,7 @@
     ],
     "image": "assets/blueprints/silencer-i-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "silencer-ii-blueprint",
@@ -1494,10 +969,7 @@
     ],
     "image": "assets/blueprints/silencer-ii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "smoke-grenade-blueprint",
@@ -1518,10 +990,7 @@
     ],
     "image": "assets/blueprints/smoke-grenade-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "snap-hook-blueprint",
@@ -1546,10 +1015,7 @@
     ],
     "image": "assets/blueprints/snap-hook-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "stable-stock-ii-blueprint",
@@ -1570,10 +1036,7 @@
     ],
     "image": "assets/blueprints/stable-stock-ii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "stable-stock-iii-blueprint",
@@ -1594,10 +1057,7 @@
     ],
     "image": "assets/blueprints/stable-stock-iii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "surge-coil-blueprint",
@@ -1622,10 +1082,7 @@
     ],
     "image": "assets/blueprints/surge-coil-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "tactical-mk-3-defensive-blueprint",
@@ -1646,10 +1103,7 @@
     ],
     "image": "assets/blueprints/tactical-mk-3-defensive-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "tactical-mk-3-healing-blueprint",
@@ -1670,10 +1124,7 @@
     ],
     "image": "assets/blueprints/tactical-mk-3-healing-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "tactical-mk-3-revival-blueprint",
@@ -1694,10 +1145,7 @@
     ],
     "image": "assets/blueprints/tactical-mk-3-revival-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "tactical-mk-3-smoke-blueprint",
@@ -1718,10 +1166,7 @@
     ],
     "image": "assets/blueprints/tactical-mk-3-smoke-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "tagging-grenade-blueprint",
@@ -1742,10 +1187,7 @@
     ],
     "image": "assets/blueprints/tagging-grenade-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "tempest-blueprint",
@@ -1770,10 +1212,7 @@
     ],
     "image": "assets/blueprints/tempest-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "torrente-blueprint",
@@ -1798,10 +1237,7 @@
     ],
     "image": "assets/blueprints/torrente-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "trailblazer-blueprint",
@@ -1826,10 +1262,7 @@
     ],
     "image": "assets/blueprints/trailblazer-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "trigger-nade-blueprint",
@@ -1853,10 +1286,7 @@
     "quest": {
       "name": "Sparks Fly",
       "trader": "Apollo"
-    },
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    }
   },
   {
     "id": "venator-blueprint",
@@ -1881,10 +1311,7 @@
     ],
     "image": "assets/blueprints/venator-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "vertical-grip-ii-blueprint",
@@ -1905,10 +1332,7 @@
     ],
     "image": "assets/blueprints/vertical-grip-ii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "vertical-grip-iii-blueprint",
@@ -1929,10 +1353,7 @@
     ],
     "image": "assets/blueprints/vertical-grip-iii-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "vita-shot-blueprint",
@@ -1953,10 +1374,7 @@
     ],
     "image": "assets/blueprints/vita-shot-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "vulcano-blueprint",
@@ -1981,10 +1399,7 @@
     ],
     "image": "assets/blueprints/vulcano-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "white-flag-blueprint",
@@ -2005,10 +1420,7 @@
     ],
     "image": "assets/blueprints/white-flag-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "wolfpack-blueprint",
@@ -2033,10 +1445,7 @@
     ],
     "image": "assets/blueprints/wolfpack-blueprint.webp",
     "recipeVerified": true,
-    "quest": null,
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    "quest": null
   },
   {
     "id": "yellow-light-stick-blueprint",
@@ -2056,9 +1465,6 @@
     "quest": {
       "name": "Last Entry",
       "trader": "Shani"
-    },
-    "stackSize": 1,
-    "weightKg": 0,
-    "sellValue": 5000
+    }
   }
 ]
