@@ -51,10 +51,18 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+## Version 4: Items Encyclopedia
 
-## Version 5
-- Completed all 82 blueprint recipes and removed Recipe Pending labels.
-- Added blueprint artwork, descriptions, crafting bench, recipe quantities, collection state, item metadata, and related quests to the Blueprints tab.
+The former Inventory tab is now **Items**. It loads the complete community item dataset through the ARC Raiders Data API, which mirrors the open RaidTheory dataset used by ARCTracker.io.
 
-## Version 6 cache fix
-This release adds cache-busted app/data URLs and a network-first service worker so GitHub Pages does not keep serving the older blueprint database. It also includes all blueprint artwork under `assets/blueprints/`.
+- Source data: RaidTheory/arcraiders-data
+- Reference site: ARCTracker.io
+- API mirror: Mahcks/arcraiders-data-api
+
+The encyclopedia loads in paginated batches and falls back to the locally bundled progression-material list if the external data source is temporarily unavailable.
+
+
+## v4.5
+- Replaced simplified mock maps with official MapGenie interactive embeds for all six maps.
+- Added responsive map viewer and full-map links.
+- Embedded maps require an internet connection.

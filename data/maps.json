@@ -1,0 +1,504 @@
+[
+  {
+    "id": "dam",
+    "name": "Dam Battlegrounds",
+    "subtitle": "Alcantara Power Plant wetlands",
+    "theme": "wetlands",
+    "events": [
+      "Harvester",
+      "Husk Graveyard",
+      "Lush Blooms",
+      "Matriarch",
+      "Night Raid",
+      "Prospecting Probes",
+      "Uncovered Caches"
+    ],
+    "zones": [
+      {
+        "name": "Dam Complex",
+        "type": "Industrial",
+        "x": 51,
+        "y": 24,
+        "hot": true
+      },
+      {
+        "name": "Control Tower",
+        "type": "Exodus",
+        "x": 70,
+        "y": 18,
+        "hot": true
+      },
+      {
+        "name": "Research & Administration",
+        "type": "Technological",
+        "x": 68,
+        "y": 39,
+        "hot": true
+      },
+      {
+        "name": "Power Generation Complex",
+        "type": "Electrical",
+        "x": 79,
+        "y": 55,
+        "hot": true
+      },
+      {
+        "name": "Water Treatment Control",
+        "type": "Industrial",
+        "x": 49,
+        "y": 52,
+        "hot": false
+      },
+      {
+        "name": "Testing Annex",
+        "type": "Technological",
+        "x": 61,
+        "y": 61,
+        "hot": true
+      },
+      {
+        "name": "Hydroponic Domes",
+        "type": "Nature",
+        "x": 29,
+        "y": 41,
+        "hot": false
+      },
+      {
+        "name": "Pale Apartments",
+        "type": "Residential",
+        "x": 22,
+        "y": 67,
+        "hot": false
+      },
+      {
+        "name": "South Swamp Outpost",
+        "type": "Industrial",
+        "x": 43,
+        "y": 80,
+        "hot": false
+      },
+      {
+        "name": "Controlled Access Zone",
+        "type": "Exodus",
+        "x": 84,
+        "y": 33,
+        "hot": true
+      }
+    ],
+    "embedUrl": "https://mapgenie.io/arc-raiders/maps/dam-battlegrounds?embed=light"
+  },
+  {
+    "id": "spaceport",
+    "name": "The Spaceport",
+    "subtitle": "Acerra launch facility",
+    "theme": "desert",
+    "events": [
+      "Harvester",
+      "Husk Graveyard",
+      "Launch Tower Loot",
+      "Lush Blooms",
+      "Matriarch",
+      "Night Raid",
+      "Prospecting Probes",
+      "Uncovered Caches"
+    ],
+    "zones": [
+      {
+        "name": "Launch Towers",
+        "type": "Exodus",
+        "x": 50,
+        "y": 22,
+        "hot": true
+      },
+      {
+        "name": "Departure Building",
+        "type": "Exodus",
+        "x": 68,
+        "y": 31,
+        "hot": true
+      },
+      {
+        "name": "Arrival Building",
+        "type": "Commercial",
+        "x": 75,
+        "y": 49,
+        "hot": true
+      },
+      {
+        "name": "Shipping Warehouse",
+        "type": "Industrial",
+        "x": 34,
+        "y": 56,
+        "hot": false
+      },
+      {
+        "name": "Vehicle Maintenance",
+        "type": "Industrial",
+        "x": 23,
+        "y": 42,
+        "hot": false
+      },
+      {
+        "name": "Control Center",
+        "type": "Technological",
+        "x": 57,
+        "y": 48,
+        "hot": true
+      },
+      {
+        "name": "Electrical Substation",
+        "type": "Electrical",
+        "x": 18,
+        "y": 69,
+        "hot": false
+      },
+      {
+        "name": "Fuel Processing",
+        "type": "Industrial",
+        "x": 46,
+        "y": 74,
+        "hot": true
+      },
+      {
+        "name": "Tunnels",
+        "type": "Underground",
+        "x": 62,
+        "y": 67,
+        "hot": true
+      },
+      {
+        "name": "Outer Checkpoint",
+        "type": "Military",
+        "x": 84,
+        "y": 72,
+        "hot": false
+      }
+    ],
+    "embedUrl": "https://mapgenie.io/arc-raiders/maps/spaceport?embed=light"
+  },
+  {
+    "id": "buried-city",
+    "name": "Buried City",
+    "subtitle": "Sand-covered old-world district",
+    "theme": "city",
+    "events": [
+      "Prospecting Probes",
+      "Uncovered Caches",
+      "Husk Graveyard",
+      "Lush Blooms",
+      "Night Raid"
+    ],
+    "zones": [
+      {
+        "name": "Grand Plaza",
+        "type": "Commercial",
+        "x": 48,
+        "y": 38,
+        "hot": true
+      },
+      {
+        "name": "Hospital",
+        "type": "Medical",
+        "x": 70,
+        "y": 28,
+        "hot": true
+      },
+      {
+        "name": "Residential Blocks",
+        "type": "Residential",
+        "x": 24,
+        "y": 34,
+        "hot": false
+      },
+      {
+        "name": "Market District",
+        "type": "Commercial",
+        "x": 36,
+        "y": 58,
+        "hot": true
+      },
+      {
+        "name": "Parking Garage",
+        "type": "Industrial",
+        "x": 62,
+        "y": 58,
+        "hot": false
+      },
+      {
+        "name": "Metro Station",
+        "type": "Underground",
+        "x": 51,
+        "y": 73,
+        "hot": true
+      },
+      {
+        "name": "Tech Offices",
+        "type": "Technological",
+        "x": 78,
+        "y": 50,
+        "hot": true
+      },
+      {
+        "name": "Electrical Works",
+        "type": "Electrical",
+        "x": 18,
+        "y": 72,
+        "hot": false
+      },
+      {
+        "name": "Old Town",
+        "type": "Residential",
+        "x": 28,
+        "y": 80,
+        "hot": false
+      },
+      {
+        "name": "Civic Center",
+        "type": "Exodus",
+        "x": 57,
+        "y": 19,
+        "hot": true
+      }
+    ],
+    "embedUrl": "https://mapgenie.io/arc-raiders/maps/buried-city?embed=light"
+  },
+  {
+    "id": "blue-gate",
+    "name": "Blue Gate",
+    "subtitle": "Mountain valley and fortified passage",
+    "theme": "mountain",
+    "events": [
+      "Harvester",
+      "Husk Graveyard",
+      "Lush Blooms",
+      "Matriarch",
+      "Night Raid",
+      "Prospecting Probes",
+      "Uncovered Caches"
+    ],
+    "zones": [
+      {
+        "name": "The Blue Gate",
+        "type": "Exodus",
+        "x": 50,
+        "y": 20,
+        "hot": true
+      },
+      {
+        "name": "Mountain Checkpoint",
+        "type": "Military",
+        "x": 69,
+        "y": 31,
+        "hot": true
+      },
+      {
+        "name": "Valley Village",
+        "type": "Residential",
+        "x": 30,
+        "y": 42,
+        "hot": false
+      },
+      {
+        "name": "Freight Yard",
+        "type": "Industrial",
+        "x": 58,
+        "y": 50,
+        "hot": true
+      },
+      {
+        "name": "Power Relay",
+        "type": "Electrical",
+        "x": 78,
+        "y": 58,
+        "hot": false
+      },
+      {
+        "name": "Research Camp",
+        "type": "Technological",
+        "x": 37,
+        "y": 62,
+        "hot": true
+      },
+      {
+        "name": "Mountain Tunnels",
+        "type": "Underground",
+        "x": 51,
+        "y": 73,
+        "hot": true
+      },
+      {
+        "name": "Farm Terraces",
+        "type": "Nature",
+        "x": 19,
+        "y": 69,
+        "hot": false
+      },
+      {
+        "name": "North Ridge",
+        "type": "Nature",
+        "x": 84,
+        "y": 22,
+        "hot": false
+      },
+      {
+        "name": "Old Barracks",
+        "type": "Military",
+        "x": 72,
+        "y": 78,
+        "hot": true
+      }
+    ],
+    "embedUrl": "https://mapgenie.io/arc-raiders/maps/the-blue-gate?embed=light"
+  },
+  {
+    "id": "stella-montis",
+    "name": "Stella Montis",
+    "subtitle": "Abandoned northern mountain facility",
+    "theme": "facility",
+    "events": [
+      "Night Raid"
+    ],
+    "zones": [
+      {
+        "name": "Central Atrium",
+        "type": "Exodus",
+        "x": 50,
+        "y": 37,
+        "hot": true
+      },
+      {
+        "name": "Medical Research",
+        "type": "Medical",
+        "x": 68,
+        "y": 28,
+        "hot": true
+      },
+      {
+        "name": "Assembly Workshops",
+        "type": "Industrial",
+        "x": 27,
+        "y": 49,
+        "hot": true
+      },
+      {
+        "name": "Data Center",
+        "type": "Technological",
+        "x": 74,
+        "y": 51,
+        "hot": true
+      },
+      {
+        "name": "Power Core",
+        "type": "Electrical",
+        "x": 53,
+        "y": 67,
+        "hot": true
+      },
+      {
+        "name": "Habitation Wing",
+        "type": "Residential",
+        "x": 28,
+        "y": 27,
+        "hot": false
+      },
+      {
+        "name": "Cargo Access",
+        "type": "Industrial",
+        "x": 18,
+        "y": 71,
+        "hot": false
+      },
+      {
+        "name": "Security Wing",
+        "type": "Military",
+        "x": 82,
+        "y": 72,
+        "hot": true
+      },
+      {
+        "name": "Lower Transit",
+        "type": "Underground",
+        "x": 46,
+        "y": 82,
+        "hot": false
+      }
+    ],
+    "embedUrl": "https://mapgenie.io/arc-raiders/maps/stella-montis?embed=light"
+  },
+  {
+    "id": "riven-tides",
+    "name": "Riven Tides",
+    "subtitle": "Exodus-era oceanfront resort",
+    "theme": "coast",
+    "events": [
+      "Night Raid",
+      "Beachcombing"
+    ],
+    "zones": [
+      {
+        "name": "Harbor Resort",
+        "type": "Commercial",
+        "x": 53,
+        "y": 31,
+        "hot": true
+      },
+      {
+        "name": "Marina",
+        "type": "Industrial",
+        "x": 75,
+        "y": 46,
+        "hot": true
+      },
+      {
+        "name": "Boardwalk",
+        "type": "Commercial",
+        "x": 62,
+        "y": 60,
+        "hot": false
+      },
+      {
+        "name": "Clifftop Villas",
+        "type": "Residential",
+        "x": 27,
+        "y": 26,
+        "hot": false
+      },
+      {
+        "name": "Tidal Power Station",
+        "type": "Electrical",
+        "x": 20,
+        "y": 62,
+        "hot": true
+      },
+      {
+        "name": "Oceanographic Lab",
+        "type": "Technological",
+        "x": 39,
+        "y": 49,
+        "hot": true
+      },
+      {
+        "name": "Seawall Bunkers",
+        "type": "Military",
+        "x": 82,
+        "y": 72,
+        "hot": true
+      },
+      {
+        "name": "Service Tunnels",
+        "type": "Underground",
+        "x": 46,
+        "y": 77,
+        "hot": false
+      },
+      {
+        "name": "Beachfront Ruins",
+        "type": "Nature",
+        "x": 69,
+        "y": 82,
+        "hot": false
+      }
+    ],
+    "embedUrl": "https://mapgenie.io/arc-raiders/maps/riven-tides?embed=light"
+  }
+]
