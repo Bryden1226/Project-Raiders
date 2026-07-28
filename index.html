@@ -1,6 +1,55 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071014"><meta name="apple-mobile-web-app-capable" content="yes"><title>Raider Companion</title><link rel="manifest" href="manifest.webmanifest?v=6"><link rel="stylesheet" href="assets/css/app.css?v=6"></head><body><main class="app"><header class="topbar"><div class="brand"><img src="assets/icons/icon-192.png" alt=""><div><div class="eyebrow">Unofficial progression companion</div><h1>Raider Companion</h1></div></div><button class="iconbtn" id="backupBtn">Backup</button></header>
-<section id="home" class="view active"><div class="hero"><div class="card"><div class="eyebrow">YOUR PROGRESS</div><h2>Everything you need.<br>Nothing telling you how to play.</h2><p class="muted">Track inventory, upgrades, expeditions, and the blueprints you own.</p></div><div class="card"><div class="eyebrow">OVERALL COMPLETION</div><div style="font-size:54px;font-weight:900" id="overall">0%</div><div class="progress"><span id="overallBar"></span></div></div></div><div class="stats"><div class="card stat"><span class="eyebrow">Blueprints</span><b id="bpStat">0 / 0</b></div><div class="card stat"><span class="eyebrow">Work Benches</span><b id="upStat">0 / 0</b></div><div class="card stat"><span class="eyebrow">Expeditions</span><b id="exStat">0 / 0</b></div><div class="card stat"><span class="eyebrow">Inventory items</span><b id="invStat">0</b></div></div><div class="sectionhead"><h2>Material overview</h2></div><div class="card"><div id="priorityList" class="list"></div></div></section>
-<section id="inventory" class="view"><div class="sectionhead"><div><div class="eyebrow">DATABASE</div><h2>Items</h2></div></div><div class="searchrow"><input class="search" id="materialSearch" placeholder="Search materials"><select class="search" id="materialSort"><option value="name">Sort: Name</option><option value="owned">Sort: Owned</option><option value="needed">Sort: Still needed</option></select></div><div id="materialList" class="list card"></div></section>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071014"><meta name="apple-mobile-web-app-capable" content="yes"><title>Raider Companion</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="assets/css/app.css"></head><body><main class="app"><header class="topbar"><div class="brand"><img src="assets/icons/icon-192.png" alt=""><div><div class="eyebrow">Unofficial progression companion</div><h1>Raider Companion</h1></div></div><button class="iconbtn" id="backupBtn">Backup</button></header>
+<section id="home" class="view active">
+  <div class="hero home-hero">
+    <div class="card">
+      <div class="eyebrow">YOUR PROGRESS</div>
+      <h2>Progress at a glance</h2>
+      <p class="muted">A quick view of your Work Benches, Scrappy, Expeditions, and Blueprint collection.</p>
+    </div>
+    <div class="card">
+      <div class="eyebrow">OVERALL COMPLETION</div>
+      <div class="home-overall" id="overall">0%</div>
+      <div class="progress"><span id="overallBar"></span></div>
+      <div class="muted home-overall-detail" id="overallDetail">0 of 0 tracked goals complete</div>
+    </div>
+  </div>
+
+  <div class="home-overview-grid">
+    <button class="card home-progress-card" type="button" data-home-nav="upgrades">
+      <div class="home-card-head"><div><div class="eyebrow">WORKSHOP</div><h2>Work Benches & Scrappy</h2></div><span class="home-arrow">›</span></div>
+      <div class="home-card-total"><b id="upPct">0%</b><span id="upStat">0 / 0 entries</span></div>
+      <div class="progress"><span id="upHomeBar"></span></div>
+      <div class="home-breakdown" id="workbenchHomeBreakdown"></div>
+    </button>
+
+    <button class="card home-progress-card" type="button" data-home-nav="expeditions">
+      <div class="home-card-head"><div><div class="eyebrow">PROJECTS</div><h2>Expeditions</h2></div><span class="home-arrow">›</span></div>
+      <div class="home-card-total"><b id="exPct">0%</b><span id="exStat">0 / 0 entries</span></div>
+      <div class="progress"><span id="exHomeBar"></span></div>
+      <div class="home-breakdown" id="expeditionHomeBreakdown"></div>
+    </button>
+
+    <button class="card home-progress-card" type="button" data-home-nav="blueprints">
+      <div class="home-card-head"><div><div class="eyebrow">COLLECTION</div><h2>Blueprints</h2></div><span class="home-arrow">›</span></div>
+      <div class="home-card-total"><b id="bpPct">0%</b><span id="bpStat">0 / 0 owned</span></div>
+      <div class="progress"><span id="bpHomeBar"></span></div>
+      <div class="home-breakdown" id="blueprintHomeBreakdown"></div>
+    </button>
+  </div>
+</section>
+<section id="inventory" class="view">
+  <div class="sectionhead"><div><div class="eyebrow">ENCYCLOPEDIA</div><h2>Items</h2></div><div class="muted" id="itemCount">Loading item database…</div></div>
+  <div class="items-controls">
+    <input class="search" id="itemSearch" placeholder="Search all items…">
+    <select class="search" id="itemTypeFilter"><option value="">All item types</option></select>
+    <select class="search" id="itemRarityFilter"><option value="">All rarities</option></select>
+    <select class="search" id="itemSort"><option value="name">Sort: Name</option><option value="type">Sort: Type</option><option value="rarity">Sort: Rarity</option><option value="value-high">Sort: Value high to low</option><option value="weight-low">Sort: Weight low to high</option></select>
+  </div>
+  <div class="chips" id="itemQuickFilters"></div>
+  <div id="itemStatus" class="notice">Loading the complete ARCTracker community item database…</div>
+  <div id="itemGrid" class="grid items-grid"></div>
+  <div class="source-note">Item data and images are provided by the community-maintained RaidTheory ARC Raiders dataset used by ARCTracker.io. Game data can change after updates.</div>
+</section>
 <section id="upgrades" class="view">
   <div class="sectionhead"><div><div class="eyebrow">WORKSHOP & SCRAPPY</div><h2>Work Benches</h2></div></div>
   <div class="tracker-toolbar">
@@ -48,4 +97,4 @@
   </section>
 </section>
 <section id="blueprints" class="view"><div class="sectionhead"><div><div class="eyebrow">COLLECTION</div><h2>Blueprints</h2></div></div><div class="searchrow"><input class="search" id="blueprintSearch" placeholder="Search blueprints"><select class="search" id="benchFilter"><option value="">All benches</option></select></div><div class="chips" id="bpChips"></div><div id="blueprintGrid" class="grid"></div></section>
-</main><nav class="bottomnav"><button class="active" data-view="home">⌂<br><span class="small">Home</span></button><button data-view="inventory">▣<br><span class="small">Items</span></button><button data-view="upgrades">⌁<br><span class="small">Work Benches</span></button><button data-view="expeditions">◎<br><span class="small">Expeditions</span></button><button data-view="blueprints">▤<br><span class="small">Blueprints</span></button></nav><div class="modal" id="modal"><div class="modalbox" id="modalBox"></div></div><input type="file" id="restoreFile" hidden accept="application/json"><script src="assets/js/app.js?v=6" type="module"></script></body></html>
+</main><nav class="bottomnav"><button class="active" data-view="home">⌂<br><span class="small">Home</span></button><button data-view="inventory">▣<br><span class="small">Items</span></button><button data-view="upgrades">⌁<br><span class="small">Work Benches</span></button><button data-view="expeditions">◎<br><span class="small">Expeditions</span></button><button data-view="blueprints">▤<br><span class="small">Blueprints</span></button></nav><div class="modal" id="modal"><div class="modalbox" id="modalBox"></div></div><input type="file" id="restoreFile" hidden accept="application/json"><script src="assets/js/app.js" type="module"></script></body></html>
