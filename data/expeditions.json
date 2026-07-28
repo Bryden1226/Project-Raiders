@@ -1,0 +1,66 @@
+{
+  "Expedition 3": {
+    "Phase 1": {
+      "Metal Parts": 150,
+      "Chemicals": 100,
+      "ARC Alloy": 80,
+      "Steel Spring": 15
+    },
+    "Phase 2": {
+      "Durable Cloth": 30,
+      "Wires": 25,
+      "Electrical Components": 20,
+      "Industrial Charger": 3
+    },
+    "Phase 3": {
+      "Coffee Pot": 1,
+      "Battery": 35,
+      "Firefly Burner": 5,
+      "Exodus Modules": 1
+    },
+    "Phase 4": {
+      "Broken Guidance System": 1,
+      "Advanced Electrical Components": 5,
+      "Breathtaking Snow Globe": 1,
+      "Bombardier Cell": 2
+    },
+    "Phase 5": {
+      "Combat Items Value": 200000,
+      "Survival Items Value": 100000,
+      "Provisions Value": 150000,
+      "Materials Value": 300000
+    }
+  },
+  "Expedition 4": {
+    "Step 1": {
+      "Metal Parts": 150,
+      "Chemicals": 100,
+      "ARC Alloy": 80,
+      "Canister": 15
+    },
+    "Step 2": {
+      "Durable Cloth": 30,
+      "Oil": 25,
+      "Electrical Components": 20,
+      "Industrial Charger": 3
+    },
+    "Step 3": {
+      "ARC Motion Core": 20,
+      "Speaker Component": 15,
+      "Turbine Compressor": 5,
+      "Exodus Modules": 2
+    },
+    "Step 4": {
+      "Portable TV": 1,
+      "Advanced Electrical Components": 5,
+      "Sirena Dorata Ship Model": 2,
+      "Vaporizer Regulator": 3
+    },
+    "Step 5": {
+      "Combat Items Value": 200000,
+      "Survival Items Value": 100000,
+      "Provisions Value": 150000,
+      "Materials Value": 300000
+    }
+  }
+}
