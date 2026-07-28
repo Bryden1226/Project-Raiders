@@ -1,7 +1,7 @@
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":"&#39;"}[m]));
-const [materials,blueprints,upgrades,expeditions]=await Promise.all(['materials','blueprints','upgrades','expeditions'].map(x=>fetch(`data/${x}.json?v=6`, {cache:'no-store'}).then(r=>r.json())));
+const [materials,blueprints,upgrades,expeditions]=await Promise.all(['materials','blueprints','upgrades','expeditions'].map(x=>fetch(`data/${x}.json`).then(r=>r.json())));
 let encyclopediaItems=[]; let itemQuickFilter='All'; let itemsLoaded=false;
 const KEY='raider_companion_v1'; let state={inventory:{},blueprints:{},upgrades:{},expeditions:{},workbenchTracker:{},expeditionTracker:{},...JSON.parse(localStorage.getItem(KEY)||'{}')};
 state.workbenchTracker ||= {};
@@ -19,7 +19,53 @@ try {
 const save=()=>localStorage.setItem(KEY,JSON.stringify(state));
 const neededFor=m=>m.uses.reduce((n,u)=>n+((u.type==='blueprint'&&!state.blueprints[u.target+' Blueprint'])||(u.type==='upgrade'&&!state.upgrades[u.target])||(u.type==='expedition'&&!state.expeditions[u.target])?u.quantity:0),0);
 function nav(){ $$('.bottomnav button').forEach(b=>b.onclick=()=>{$$('.bottomnav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');$$('.view').forEach(x=>x.classList.remove('active'));$('#'+b.dataset.view).classList.add('active');window.scrollTo(0,0)}) }
-function renderHome(){const bpDone=Object.values(state.blueprints).filter(Boolean).length, upTotal=Object.values(upgrades).reduce((n,x)=>n+Object.keys(x).length,0), upDone=Object.values(state.upgrades).filter(Boolean).length, exTotal=Object.values(expeditions).reduce((n,x)=>n+Object.keys(x).length,0), exDone=Object.values(state.expeditions).filter(Boolean).length; const total=blueprints.length+upTotal+exTotal,done=bpDone+upDone+exDone,p=Math.round(done/total*100);$('#overall').textContent=p+'%';$('#overallBar').style.width=p+'%';$('#bpStat').textContent=`${bpDone} / ${blueprints.length}`;$('#upStat').textContent=`${upDone} / ${upTotal}`;$('#exStat').textContent=`${exDone} / ${exTotal}`;$('#invStat').textContent=encyclopediaItems.length?encyclopediaItems.length.toLocaleString():'Loading…'; const top=materials.map(m=>({...m,need:neededFor(m),have:+state.inventory[m.id]||0})).filter(m=>m.need>m.have).sort((a,b)=>(b.need-b.have)-(a.need-a.have)).slice(0,8);$('#priorityList').innerHTML=top.length?top.map(m=>`<div class="row" data-material="${m.id}"><div><b>${esc(m.name)}</b><div class="muted">Have ${m.have} · Still needed ${Math.max(0,m.need-m.have)}</div></div><span>›</span></div>`).join(''):'<div class="empty">No outstanding tracked material requirements.</div>';$$('[data-material]').forEach(x=>x.onclick=()=>showItem(encyclopediaItems.find(i=>i.id===x.dataset.material.replaceAll('-','_'))||{...materials.find(m=>m.id===x.dataset.material),id:x.dataset.material.replaceAll('-','_'),name:{en:materials.find(m=>m.id===x.dataset.material)?.name||'Material'},description:{en:materials.find(m=>m.id===x.dataset.material)?.description||''}}))}
+function renderHome(){
+  const wb=workbenchTotals(), ex=expeditionTotals();
+  const bpDone=blueprints.filter(b=>state.blueprints[b.name]).length;
+  const bpTotal=blueprints.length;
+  const wbPct=wb.required?Math.round(wb.collected/wb.required*100):0;
+  const exPct=ex.required?Math.round(ex.collected/ex.required*100):0;
+  const bpPct=bpTotal?Math.round(bpDone/bpTotal*100):0;
+  const overallPct=Math.round((wbPct+exPct+bpPct)/3);
+
+  $('#overall').textContent=overallPct+'%';
+  $('#overallBar').style.width=overallPct+'%';
+  $('#overallDetail').textContent='Workbench, expedition, and blueprint progress';
+  $('#upPct').textContent=wbPct+'%';
+  $('#upStat').textContent=`${wb.collected.toLocaleString()} / ${wb.required.toLocaleString()} materials collected`;
+  $('#upHomeBar').style.width=wbPct+'%';
+  $('#exPct').textContent=exPct+'%';
+  $('#exStat').textContent=`${ex.collected.toLocaleString()} / ${ex.required.toLocaleString()} materials collected`;
+  $('#exHomeBar').style.width=exPct+'%';
+  $('#bpPct').textContent=bpPct+'%';
+  $('#bpStat').textContent=`${bpDone} / ${bpTotal} owned`;
+  $('#bpHomeBar').style.width=bpPct+'%';
+
+  $('#workbenchHomeBreakdown').innerHTML=Object.keys(upgrades).map(station=>{
+    let required=0,collected=0;
+    for(const [level,mats] of Object.entries(upgrades[station])) for(const [item,need] of Object.entries(mats)){
+      required+=need; collected+=Math.min(workbenchQty(station,level,item),need);
+    }
+    const pct=required?Math.round(collected/required*100):0;
+    return `<div class="home-progress-row"><div><span>${esc(station)}</span><b>${pct}%</b></div><div class="mini-progress"><span style="width:${pct}%"></span></div></div>`;
+  }).join('');
+
+  $('#expeditionHomeBreakdown').innerHTML=Object.keys(expeditions).map(expedition=>{
+    let required=0,collected=0;
+    for(const [stage,mats] of Object.entries(expeditions[expedition])) for(const [item,need] of Object.entries(mats)){
+      required+=need; collected+=Math.min(expeditionQty(expedition,stage,item),need);
+    }
+    const pct=required?Math.round(collected/required*100):0;
+    return `<div class="home-progress-row"><div><span>${esc(expedition)}</span><b>${pct}%</b></div><div class="mini-progress"><span style="width:${pct}%"></span></div></div>`;
+  }).join('');
+
+  $$('[data-home-nav]').forEach(card=>card.onclick=()=>{
+    const target=card.dataset.homeNav;
+    const navButton=$(`.bottomnav button[data-view="${target}"]`);
+    if(navButton) navButton.click();
+  });
+}
+
 const itemName=i=>typeof i?.name==='object'?(i.name.en||Object.values(i.name)[0]||i.id):i?.name||i?.id||'Unknown Item';
 const itemDescription=i=>typeof i?.description==='object'?(i.description.en||Object.values(i.description)[0]||''):i?.description||'';
 const localMaterialById=new Map(materials.map(m=>[m.id.replaceAll('-','_'),m]));
@@ -216,8 +262,8 @@ function renderExpeditions(){
   $('#expeditionCollectedCount').textContent=totals.collected.toLocaleString(); $('#expeditionRequiredCount').textContent=totals.required.toLocaleString(); $('#expeditionEntryCount').textContent=`${totals.done} / ${totals.entries}`;
   $('#expeditionMasterBody').innerHTML=Object.entries(totals.master).sort((a,b)=>a[0].localeCompare(b[0])).map(([item,v])=>{const remaining=Math.max(0,v.required-v.collected);return `<tr><td>${esc(item)}</td><td>${v.collected.toLocaleString()}</td><td>${v.required.toLocaleString()}</td><td class="${remaining?'status-need':'status-ok'}">${remaining.toLocaleString()}</td></tr>`}).join('');
 }
-let cat='All';function renderBlueprints(){const cats=['All',...new Set(blueprints.map(b=>b.category))];$('#bpChips').innerHTML=cats.map(c=>`<button class="chip ${cat===c?'active':''}" data-cat="${c}">${c}</button>`).join('');$$('[data-cat]').forEach(x=>x.onclick=()=>{cat=x.dataset.cat;renderBlueprints()});const q=$('#blueprintSearch').value.toLowerCase(),bench=$('#benchFilter').value;let a=blueprints.filter(b=>(cat==='All'||b.category===cat)&&(!bench||b.bench===bench)&&(b.name.toLowerCase().includes(q)||String(b.description||'').toLowerCase().includes(q)));$('#blueprintGrid').innerHTML=a.map(b=>`<article class="card itemcard blueprint-card" data-bp="${b.id}"><img class="thumb" src="${b.image}?v=6" alt="${esc(b.name)}" loading="lazy"><div><h3>${esc(b.itemName)}</h3><div class="badges"><span class="badge">${esc(b.category)}</span><span class="badge">${esc(b.rarity)}</span></div><div class="muted" style="margin-top:7px">${esc(b.bench)} · ${b.materials.length} material${b.materials.length===1?'':'s'}</div></div><label class="owned" onclick="event.stopPropagation()" title="Mark blueprint owned"><input type="checkbox" data-own="${b.name}" ${state.blueprints[b.name]?'checked':''}></label></article>`).join('')||'<div class="empty">No matching blueprints.</div>';$$('[data-own]').forEach(x=>x.onchange=()=>{state.blueprints[x.dataset.own]=x.checked;save();renderAll()});$$('[data-bp]').forEach(x=>x.onclick=()=>showBlueprint(blueprints.find(b=>b.id===x.dataset.bp)))}
-function showBlueprint(b){const live=encyclopediaItems.find(i=>itemName(i).toLowerCase()===b.name.toLowerCase());const description=b.description||itemDescription(live)||`Unlocks the crafting recipe for ${b.itemName}.`;const stack=b.stackSize??live?.stackSize??1,weight=b.weightKg??live?.weightKg??0,value=b.sellValue??live?.value??5000;$('#modalBox').innerHTML=`<div class="modalhead blueprint-modal-head"><img src="${b.image}?v=6" alt="${esc(b.name)}"><div><div class="badges"><span class="badge">Blueprint</span><span class="badge">${esc(b.rarity)}</span><span class="badge">${state.blueprints[b.name]?'Owned':'Not owned'}</span></div><h2>${esc(b.name)}</h2><p class="muted">${esc(description)}</p><div class="item-values"><span>Stack ${displayValue(stack)}</span><span>${displayWeight(weight)}</span><span>${displayValue(value)} coins</span></div></div><button class="iconbtn close">✕</button></div><div class="blueprint-owned-row"><label><input type="checkbox" id="modalBlueprintOwned" ${state.blueprints[b.name]?'checked':''}> Blueprint collected</label></div><h3 style="color:var(--accent)">Crafting recipe</h3><div class="row"><span>Craft Bench</span><b>${esc(b.bench)}</b></div>${b.materials.map(x=>`<div class="row recipe-row"><span>${esc(x.item)}</span><b>×${x.quantity}</b></div>`).join('')}${b.quest?`<h3 style="color:var(--accent)">Related quest</h3><div class="row"><span>${esc(b.quest.name)} · ${esc(b.quest.trader)}</span><b>Reward ×${b.quest.reward||1}</b></div>`:''}`;$('#modal').classList.add('open');$('.close').onclick=closeModal;$('#modalBlueprintOwned').onchange=e=>{state.blueprints[b.name]=e.target.checked;save();renderAll();showBlueprint(b)}}
+let cat='All';function renderBlueprints(){const cats=['All',...new Set(blueprints.map(b=>b.category))];$('#bpChips').innerHTML=cats.map(c=>`<button class="chip ${cat===c?'active':''}" data-cat="${c}">${c}</button>`).join('');$$('[data-cat]').forEach(x=>x.onclick=()=>{cat=x.dataset.cat;renderBlueprints()});const q=$('#blueprintSearch').value.toLowerCase(),bench=$('#benchFilter').value;let a=blueprints.filter(b=>(cat==='All'||b.category===cat)&&(!bench||b.bench===bench)&&(b.name.toLowerCase().includes(q)||(b.description||'').toLowerCase().includes(q)));$('#blueprintGrid').innerHTML=a.map(b=>`<article class="card itemcard" data-bp="${b.id}"><img class="thumb blueprint-thumb" src="${b.image}" alt="${esc(b.itemName)} blueprint icon"><div class="blueprint-card-copy"><h3>${esc(b.itemName)}</h3><div class="badges"><span class="badge">${esc(b.category)}</span><span class="badge">${esc(b.rarity)}</span></div><div class="muted blueprint-meta"><span>${esc(b.bench)}</span><span>Sell: ${(b.sellValue||0).toLocaleString()}</span></div></div><label class="owned" onclick="event.stopPropagation()"><input type="checkbox" data-own="${b.name}" ${state.blueprints[b.name]?'checked':''} aria-label="Mark ${esc(b.itemName)} owned"></label></article>`).join('')||'<div class="empty">No matching blueprints.</div>';$$('.blueprint-thumb').forEach(img=>img.onerror=()=>{img.classList.add('image-error');img.removeAttribute('src');img.alt='Blueprint image unavailable'});$$('[data-own]').forEach(x=>x.onchange=()=>{state.blueprints[x.dataset.own]=x.checked;save();renderAll()});$$('[data-bp]').forEach(x=>x.onclick=()=>showBlueprint(blueprints.find(b=>b.id===x.dataset.bp)))}
+function showBlueprint(b){const recipe=b.materials.map(x=>`<div class="row blueprint-recipe-row"><span>${esc(x.item)}</span><b>×${x.quantity}</b></div>`).join('');$('#modalBox').innerHTML=`<div class="modalhead"><img class="blueprint-detail-image" src="${b.image}" alt="${esc(b.itemName)} blueprint icon"><div><div class="badges"><span class="badge">Blueprint</span><span class="badge">${esc(b.rarity)}</span><span class="badge">${esc(b.category)}</span></div><h2>${esc(b.itemName)}</h2><div class="muted">Craft bench: ${esc(b.bench)}</div><div class="muted">Sell value: <strong>${(b.sellValue||0).toLocaleString()}</strong></div></div><button class="iconbtn close">✕</button></div>${b.description?`<p class="blueprint-description">${esc(b.description)}</p>`:''}<div class="blueprint-facts"><div><span>Stack</span><b>${b.stackSize??1}</b></div><div><span>Weight</span><b>${b.weightKg??0} kg</b></div><div><span>Sell</span><b>${(b.sellValue||0).toLocaleString()}</b></div></div><h3 style="color:var(--accent)">Crafting requirements</h3>${recipe||'<div class="notice">No crafting materials listed.</div>'}${b.quest?`<h3 style="color:var(--accent)">Related quest</h3><div class="row"><span>${esc(b.quest.name)} · ${esc(b.quest.trader)}</span><b>Reward ×1</b></div>`:''}`;$('#modal').classList.add('open');const detailImg=$('.blueprint-detail-image');if(detailImg)detailImg.onerror=()=>{detailImg.classList.add('image-error');detailImg.removeAttribute('src');detailImg.alt='Blueprint image unavailable'};$('.close').onclick=closeModal}
 function closeModal(){ $('#modal').classList.remove('open') }$('#modal').onclick=e=>{if(e.target===$('#modal'))closeModal()};
 function renderAll(){renderHome();renderItems();renderUpgrades();renderExpeditions();renderBlueprints()}
 const benches=[...new Set(blueprints.map(b=>b.bench))].sort();$('#benchFilter').innerHTML+='<option>'+benches.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join('');$('#itemSearch').oninput=renderItems;$('#itemTypeFilter').onchange=renderItems;$('#itemRarityFilter').onchange=renderItems;$('#itemSort').onchange=renderItems;$('#blueprintSearch').oninput=renderBlueprints;$('#benchFilter').onchange=renderBlueprints;
@@ -233,4 +279,4 @@ $('#expeditionCompleteBtn').onclick=()=>{const q=$('#expeditionSearch').value.tr
 $('#expeditionResetBtn').onclick=()=>{if(confirm('Reset every Expedition material?')){state.expeditionTracker={};state.expeditions={};save();renderAll()}};
 $('#expeditionExportBtn').onclick=()=>{const blob=new Blob([JSON.stringify({version:1,tracker:'expeditions',state:state.expeditionTracker},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='arc-raiders-expeditions-save.json';a.click();URL.revokeObjectURL(a.href)};
 $('#expeditionImportFile').onchange=async e=>{try{const obj=JSON.parse(await e.target.files[0].text());state.expeditionTracker={...(obj.state||obj)};for(const [expedition,stages] of Object.entries(expeditions))for(const [stage,mats] of Object.entries(stages))state.expeditions[`${expedition} — ${stage}`]=Object.entries(mats).every(([item,need])=>expeditionQty(expedition,stage,item)>=need);save();renderAll()}catch{alert('That Expedition tracker save could not be imported.')}e.target.value=''};
-nav();renderAll();loadItemsEncyclopedia();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('service-worker.js?v=6').then(r=>r.update());
+nav();renderAll();loadItemsEncyclopedia();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('service-worker.js');
