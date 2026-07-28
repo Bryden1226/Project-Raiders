@@ -55,3 +55,6 @@ Then open `http://localhost:8000`.
 ## Version 5
 - Completed all 82 blueprint recipes and removed Recipe Pending labels.
 - Added blueprint artwork, descriptions, crafting bench, recipe quantities, collection state, item metadata, and related quests to the Blueprints tab.
+
+## Version 6 cache fix
+This release adds cache-busted app/data URLs and a network-first service worker so GitHub Pages does not keep serving the older blueprint database. It also includes all blueprint artwork under `assets/blueprints/`.
